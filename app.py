@@ -1,6 +1,9 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+st.subheader("Biểu đồ điểm tổng kết của 10 sinh viên")
+
+chart_data = df.set_index("Họ tên")[["Tổng kết"]]
+st.bar_chart(chart_data)
 
 st.set_page_config(page_title="Quan ly diem sinh vien", page_icon="📚", layout="wide")
 st.title("QUẢN LÝ ĐIỂM SINH VIÊN")
